@@ -1,0 +1,34 @@
+@import "../../../styles/abstracts/";
+
+.component {
+      margin: calc($spacing * 15) 0px;
+
+      &.maxWidth {
+            margin: calc($spacing * 15);
+
+            @include breakpoint("md") {
+                  width: 750px;
+            }
+
+            @include breakpoint("lg") {
+                  width: 970px;
+            }
+
+            @include breakpoint("xl") {
+                  width: 1230px;
+            }
+
+            @include breakpoint("xxl") {
+                  width: 1430px;
+            }
+      }
+
+      &__title {
+            @include text($text-primary, 500, "18px");
+            margin-bottom: calc($spacing * 5);
+      }
+
+      &__content {
+            padding: calc($spacing * 10) 0px !important;
+      }
+}

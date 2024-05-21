@@ -1,0 +1,16 @@
+/**
+ * The styles to define globally
+ * Imported in nuxt.config.ts
+ */
+// Variables
+@import './abstracts/variables/index';
+
+// Mixins
+@import './abstracts/mixins/index';
+
+// Base
+@import './base/border-box';
+@import './base/font-faces';
+@import './base/inputs';
+@import './base/typography';
+@import './base/body';

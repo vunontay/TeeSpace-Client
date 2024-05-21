@@ -1,0 +1,9 @@
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Enable vertical scrolling */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  

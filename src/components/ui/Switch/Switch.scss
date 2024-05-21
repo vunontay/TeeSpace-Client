@@ -1,0 +1,67 @@
+@import "../../../styles/abstracts/index";
+
+.switch {
+  position: relative;
+  height: 22px;
+  width: 42px;
+  border-radius: 20px;
+  > label {
+    cursor: pointer;
+    .overlay {
+      background-color: $background-switch;
+      position: absolute;
+      height: 22px;
+      width: 42px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      border-radius: 20px;
+      transition: 0.2s;
+    }
+  
+    > input[type="checkbox"] {
+      opacity: 0;
+    }
+    > input[type="checkbox"]:checked {
+      ~ .overlay {
+        background-color: $background-switch-checked;
+      }
+  
+      ~ .slide {
+        &::after {
+          transform: translateX(18px);
+        }
+      }
+    }
+  
+    .slide {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      &::after {
+        content: "";
+        background-color: $white;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        transition: 0.2s;
+      }
+    }
+  }
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    > label {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+ 
+}

@@ -1,0 +1,44 @@
+@import "../../../styles/abstracts/";
+
+.tabs {
+      &__menu {
+            position: relative;
+            display: flex;
+            min-height: 4.6rem;
+
+            &::before {
+                  content: "";
+                  position: absolute;
+                  @include position(absolute, 0, 0, 0, 0);
+                  border-bottom: 0.1rem solid $gray_100;
+            }
+
+            &--list {
+                  display: inline-flex;
+                  width: 100%;
+                  position: relative;
+            }
+
+            &--item {
+                  flex: 1 1 auto;
+                  padding: 0 1rem;
+                  cursor: pointer;
+                  text-transform: capitalize;
+
+                  &.active {
+                        border-bottom: 0.2rem solid $orange;
+                        transition: border-bottom-color 0.3s ease;
+                  }
+
+                  &:hover {
+                        color: $orange;
+                  }
+
+                  &-link {
+                        display: inline-block;
+                        padding: 10px;
+                  }
+            }
+      }
+
+}

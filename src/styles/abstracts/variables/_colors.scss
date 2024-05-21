@@ -1,0 +1,59 @@
+//shared color
+$orange: #fb6017;
+$orange_100: #e2401c;
+
+$crimson: #dd3333;
+$crimson_100: #e42234;
+$crimson_200: #cb2027;
+$crimson_300: #c40316;
+
+$blur: #1e73be;
+$blur_100: #0073aa;
+$blur_200: #3b5998;
+
+$white: #ffffff;
+
+$black: #000;
+$black_100: #1f1f1f;
+$black_200: #222;
+$black_300: #333;
+
+
+$gray: #f3f4f6;
+$gray_100: #e9e9e9;
+$gray_200: #b5b5b5;
+$gray_300: #999;
+$gray_400: #868686;
+$gray_500: #757575;
+$gray_600: #666;
+$gray_700: #555;
+$gray_800: #4a4a4a;
+$gray_900: #999;
+
+
+$green: #2ebb77;
+
+// variables ///
+$primary: $orange;
+
+$text_primary: $black;
+$text_secondary: $gray_500;
+
+$border: $gray_100;
+$border: $gray;
+$border_hover: rgb(241, 245, 249);
+$border_dark: $gray_200;
+$border_hover: $gray_800;
+$border_active: $gray_800;
+
+$error: $crimson_300;
+
+//checkbox
+$checkbox-border: $gray_600;
+
+$hover_btn : rgba(241, 245, 249, 0.1);
+
+//background
+//background
+$background-switch: $gray_300;
+$background-switch-checked: $orange_100;

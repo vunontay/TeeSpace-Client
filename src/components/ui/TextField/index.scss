@@ -1,0 +1,65 @@
+@import '../../../styles/abstracts/';
+
+.textfield {
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    .textfield__input {
+      border-color: $green;
+    }
+  }
+
+  &__label {
+    @include position(absolute, 1rem, null, null, 1.4rem);
+    pointer-events: none;
+    @include transition(all 0.2s ease-in-out);
+    @include text($text_secondary, null, 1.4rem);
+  }
+
+  &__input {
+    border-radius: 1.2rem;
+    padding: 1.2rem 1.4rem;
+    height: 4.4rem;
+    font-weight: 400;
+
+    &:focus,
+    &:not(:focus):valid {
+      border-color: $green;
+
+      ~.textfield__label {
+        top: -0.8rem;
+        left: 0.8rem;
+        @include text($green, 500, 1.2rem);
+        opacity: 1;
+        background-color: $white;
+        padding: 0 0.6rem 0;
+        z-index: 1;
+      }
+    }
+  }
+
+  &.error {
+    .textfield__label {
+      color: $error;
+    }
+
+    .textfield__input {
+      border-color: $error;
+
+      &:focus,
+      &:not(:focus):valid {
+        ~.textfield__label {
+          color: $error;
+        }
+      }
+    }
+  }
+
+  &__error {
+
+    @include flex(left, center);
+    letter-spacing: 0.04rem;
+    color: $error;
+  }
+}

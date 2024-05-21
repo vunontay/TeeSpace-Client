@@ -1,0 +1,110 @@
+/*
+ * 1. Set 1rem to be equal to 10px while preserving accessibility
+ * for users who change their browser's default font-size.
+ * 2. Set default font-family, color and line-height
+ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1 */
+  font-family: $font-family;
+  color: $text-primary;
+  /* 2 */
+  line-height: 1.6;
+  /* 2 */
+  letter-spacing: 0.02rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+small {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.6rem;
+  color: $text-primary;
+
+  @include breakpoint(md) {
+    font-size: 4.8rem;
+  }
+}
+
+h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.4rem;
+  color: $text-primary;
+
+  @include breakpoint(md) {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2.2rem;
+  color: $text-primary;
+}
+
+h4 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  color: $text-primary;
+}
+
+h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: $text-primary;
+}
+
+p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+strong {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+}
+
+a {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: $text-primary;
+  text-decoration: none;
+}
+
+small {
+  font-size: 1.2rem;
+  display: inline-block;
+}
+
+div,
+span,
+ul,
+li {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+}

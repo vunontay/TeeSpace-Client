@@ -1,0 +1,76 @@
+@import '../../../styles/abstracts/';
+
+.quantity {
+  @include box(14rem, 4.6rem);
+  border: 0.1rem solid $border;
+  padding: $spacing * 2;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  position: relative;
+  background-color: $gray;
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &__btn {
+    @include box(3.6rem, 3.6rem);
+    @include flex(center, center);
+    @include text($text-secondary, 600, 1.6rem);
+    cursor: pointer;
+    border-radius: 1.2rem;
+    @include transition(all 0.15s ease);
+    transform: translateY(-50%);
+    overflow: hidden;
+
+    &:after {
+      content: '';
+      background: $gray-200;
+      @include position(absolute, 50%, null, null, 50%);
+      transform: translate(-50%, -50%);
+      @include box(0, 0);
+      transform-style: flat;
+      opacity: 0;
+      border-radius: 100%;
+      transition: all 0.6s;
+    }
+
+    &:active:after {
+      @include box(10rem, 10rem);
+      opacity: 0.4;
+      transition: 0.1s;
+    }
+
+    &.left {
+      @include position(absolute, 50%, null, null, $spacing * 2);
+    }
+
+    &.right {
+      @include position(absolute, 50%, $spacing * 2, null, null);
+    }
+  }
+
+  &__textfield {
+    height: 100%;
+    text-align: center;
+    padding: 0;
+    background-color: $gray;
+    font-weight: bold;
+
+    &:focus,
+    &:not(:focus):valid {
+      outline: none;
+      border: none;
+
+      ~.textfield__label {
+        top: -0.8rem;
+        left: 0.8rem;
+        @include text($text_primary, null, 1rem);
+        opacity: 1;
+        background-color: $white;
+        padding: 0 0.5rem 0;
+        z-index: 1;
+      }
+    }
+  }
+}

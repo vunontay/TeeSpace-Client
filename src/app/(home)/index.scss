@@ -1,0 +1,49 @@
+// @import '../../styles/abstracts/index';
+
+// $navbar-height: 7.2rem;
+// $sidebar-width: 25rem;
+
+// .admin-app {
+//       @include flex(flex-start, flex-start);
+//       width: 100%;
+//       flex-wrap: nowrap;
+//       min-height: 1000vh;
+//       position: relative;
+
+//       &__side-bar {
+//             display: none;
+
+//             @include breakpoint(xl) {
+//                   @include position(fixed, 0, null, null, 0);
+//                   display: block;
+//                   width: $sidebar-width;
+//             }
+//       }
+
+//       &__container {
+//             flex: 1;
+//             position: relative;
+
+//             @include breakpoint(xl) {
+//                   padding-left: $sidebar-width;
+//             }
+
+//             .navbar {
+//                   @include position(fixed, 0, 0, null, 0);
+
+//                   @include breakpoint(xl) {
+//                         left: $sidebar-width;
+//                         display: block;
+//                         width: $sidebar-width;
+//                   }
+
+//                   z-index: 10;
+//                   height: $navbar-height;
+//             }
+
+//             .content {
+//                   padding-top: $navbar-height;
+//                   overflow: auto;
+//             }
+//       }
+// }
