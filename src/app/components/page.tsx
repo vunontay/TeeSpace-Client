@@ -8,6 +8,7 @@ import { IconButton } from "@/components/ui/IconButton";
 import { CheckBox } from "@/components/ui/CheckBox";
 import { InputQuantity } from "@/components/ui/InputQuantity";
 import { TextField } from "@/components/ui/TextField";
+import { InputRadio } from "@/components/ui/InputRadio";
 const Components = () => {
     return (
         <div>
@@ -55,6 +56,22 @@ const Components = () => {
                     label="TextField"
                     error
                     helperText="This textfield is error"
+                />
+            </Component>
+            <Component title="Input Radio">
+                <InputRadio
+                    // onChange={updateRadio}
+                    name="myRadio"
+                    value="1"
+                    label="Option 1"
+                    // checked={value === '1'}
+                />
+                <InputRadio
+                    // onChange={updateRadio}
+                    name="myRadio"
+                    value="2"
+                    label="Option 2"
+                    // checked={value === '2'}
                 />
             </Component>
         </div>
